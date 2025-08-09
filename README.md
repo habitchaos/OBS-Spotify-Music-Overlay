@@ -11,7 +11,7 @@ Fully customizable to fit your stream’s style.
 - Built with **HTML + Node.js**  
 - Easy to customize
 
-## 📦 Requirements
+## Requirements
 - **Node.js**
 - **Spotify Developer Account** ([Create an app here](https://developer.spotify.com/dashboard))  
   - Get your **Client ID** and **Client Secret**  
@@ -19,7 +19,7 @@ Fully customizable to fit your stream’s style.
 - **OBS Studio** (latest version recommended)  
 - Internet connection (very important)
 
-## ⚙️ Installation
+## Installation
 1. **Download the project**
    - Click the green **Code** button (top-right of this page)  
    - Select **Download ZIP**  
