@@ -31,7 +31,7 @@ Fully customizable to fit your stream’s style.
    ```bash
    npm install
 
-4. Configure Spotify credentials
+4. **Configure Spotify credentials**
 - Open server.js
 - Replace:
   ```bash
@@ -39,15 +39,15 @@ Fully customizable to fit your stream’s style.
   const client_secret = "YOUR_CLIENT_SECRET";
   const redirect_uri = "YOUR_REDIRECT_URL";
 
-5. Run the server
+5. **Run the server**
    ```bash
    node server.js
 
-6. Log in to Spotify
+6. **Log in to Spotify**
 - Visit (Your redirect URL) in your browser
 - Click Log in with Spotify
 - Approve permissions
 
-7. Add to OBS
+7. **Add to OBS**
 - Drag and drop the overlay.html file to OBS
 - Double-click the file to adjust the size and position.
