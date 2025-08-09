@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Spotify Overlay</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+        
+        body {
+            background: transparent;
+            color: white;
+            font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            margin: 0;
+            padding: 0;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+        }
+        .container {
+            display: flex;
+            align-items: flex-start;
+            gap: 24px;
+            padding: 20px;
+            background: transparent;
+            width: auto;
+            max-width: 600px;
+            position: relative;
+        }
+        #artwork {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 12px;
+            display: none;
+            flex-shrink: 0;
+        }
+        .track-info {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            min-width: 0;
+            max-width: 420px;
+        }
+        #song {
+            font-size: 22px;
+            font-weight: 600;
+            margin: 0 0 10px 0;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            line-height: 1.2;
+            color: #ffffff;
+        }
+        #artist {
+            font-size: 18px;
+            font-weight: 400;
+            margin: 0 0 8px 0;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            line-height: 1.2;
+            color: #ffffff;
+        }
+        #album {
+            font-size: 16px;
+            font-weight: 400;
+            margin: 0 0 10px 0;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            line-height: 1.2;
+            color: #ffffff;
+        }
+        .status-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 8px;
+        }
+        #status {
+            font-size: 14px;
+            color: #ffffff;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin: 0;
+        }
+        .progress-container {
+            display: flex;
+            gap: 6px;
+            font-size: 14px;
+            color: #ffffff;
+        }
+        #current-time {
+            font-weight: 500;
+            opacity: 0.9;
+        }
+        .track-change {
+            animation: slideIn 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        @keyframes slideIn {
+            0% { 
+                opacity: 0; 
+                transform: translateX(-10px);
+            }
+            100% { 
+                opacity: 1; 
+                transform: translateX(0);
+            }
+        }
+        
+        /* Show artwork when available */
+        #artwork:not([src=""]) {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img id="artwork" src="" alt="Album Artwork">
+        <div class="track-info">
+            <div id="song">Loading...</div>
+            <div id="artist"></div>
+            <div id="album"></div>
+            <div class="status-container">
+                <div id="status"></div>
+            </div>
+            <div class="progress-container">
+                <span id="current-time">0:00</span>
+                <span id="duration">/ 0:00</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="overlay.js"></script>
+</body>
+</html>
